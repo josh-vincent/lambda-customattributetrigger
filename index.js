@@ -17,7 +17,7 @@ exports.handler = async (event) => {
     attribute: "seed_phrase",
     value: "act ill etc",
   };
-  return updateCognito(update).promise();
+  return await updateCognito(update);
 };
 
 const updateCognito = async ({ userPoolId, userName, attribute, value }) => {
